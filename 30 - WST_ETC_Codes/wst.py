@@ -1,5 +1,5 @@
 import logging
-from pyetc.version import  __version__
+from pyetc_dev.version import  __version__
 from mpdaf.obj import Spectrum, WaveCoord
 from astropy.table import Table
 import os, sys
@@ -63,7 +63,7 @@ class WST(ETC):
                                obscuration=IFS_OBSCURATION, # IFS telescope obscuration,
                                iq_fwhm_tel = np.sqrt(2)/2 * 0.10, # fwhm PSF of telescope
                                iq_fwhm_ins = np.sqrt(2)/2 * 0.10, # fwhm PSF of instrument
-                               iq_beta = 2.50, # beta PSF of telescope + instrument
+                               iq_beta = 10, # beta PSF of telescope + instrument
                                spaxel_size = 0.25, # spaxel size in arcsec
                                dlbda = 0.97, # Angstroem/pixel
                                lbda1 = 6000, # starting wavelength in Angstroem

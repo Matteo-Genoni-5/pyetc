@@ -1,5 +1,5 @@
 import logging
-from pyetc.version import  __version__
+from pyetc_dev.version import  __version__
 from mpdaf.obj import Spectrum, WaveCoord
 from astropy.table import Table
 import os, sys

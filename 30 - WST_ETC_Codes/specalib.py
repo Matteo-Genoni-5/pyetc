@@ -67,7 +67,7 @@ class PhotometricSystem:
     
     def _load_filter_profiles(self):
         """Loads filter transmission profiles from files."""
-        filters_folder = pkg_resources.resource_filename("pyetc2", "Band_Filters/")  # Replace with the correct path
+        filters_folder = pkg_resources.resource_filename("pyetc_dev", "Band_Filters/")  # Replace with the correct path
         band_filters = {}
         
         for filename in os.listdir(filters_folder):
@@ -181,7 +181,7 @@ class SEDModels:
     def __init__(self):
         # Save all filenames from ESO_original_spectra/ directory to a dictionary
         self.eso_spectra_files = {}
-        eso_spectra_dir = pkg_resources.resource_filename("pyetc2", "ESO_original_spectra/") #Replace also this with your path
+        eso_spectra_dir = pkg_resources.resource_filename("pyetc_dev", "ESO_original_spectra/") #Replace also this with your path
         try:
             for idx, filename in enumerate(os.listdir(eso_spectra_dir)):
                 if os.path.isfile(os.path.join(eso_spectra_dir, filename)):

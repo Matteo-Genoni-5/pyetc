@@ -1,5 +1,5 @@
 import logging
-from pyetc.version import  __version__
+from pyetc_dev.version import  __version__
 from mpdaf.obj import Spectrum, WaveCoord
 from astropy.table import Table
 import os, sys
@@ -54,7 +54,7 @@ class VLT(ETC):
                                version='1.0', 
                                iq_fwhm_tel = np.sqrt(2)/2 * 0.10, # fwhm PSF of telescope
                                iq_fwhm_ins = np.sqrt(2)/2 * 0.10, # fwhm PSF of instrument
-                               iq_beta = 2.5, # beta PSF of telescope + instrument                               
+                               iq_beta = 2.50, # beta PSF of telescope + instrument                               
                                spaxel_size = 0.20, # spaxel size in arcsec
                                dlbda = 1.25, # Angstroem/pixel
                                lbda1 = 4800, # starting wavelength in Angstroem
@@ -63,6 +63,7 @@ class VLT(ETC):
                                ron = 3.0, # readout noise (e-)
                                dcurrent = 3.0, # dark current (e-/pixel/h)
                                )
+        
         if not skip_dataload:
             get_data(self.ifs, chan, 'ifs', CURDIR)   
         
