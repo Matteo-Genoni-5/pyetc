@@ -707,7 +707,7 @@ class ETC:
                 if obs['ndit'] is None:
                     raise ValueError('obs ndit cannot be None for dit computation')
             else:
-                _checkobs(obs, usedobs, ['moon','dnit','snr','airmass','spec_type','ima_type'])
+                _checkobs(obs, usedobs, ['moon','dit','snr','airmass','spec_type','ima_type'])
                 if obs['dit'] is None:
                     raise ValueError('obs dit cannot be None for ndit computation')
 
